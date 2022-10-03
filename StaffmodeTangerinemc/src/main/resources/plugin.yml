@@ -1,0 +1,15 @@
+name: Staffmode
+version: '${project.version}'
+main: staffmode.main.Core
+authors: [ rumenoh ]
+description: StaffMode plugin
+commands:
+  staffmode:
+    aliases: [staffm, staff]
+    usage: "/command"
+  god:
+    aliases: [godmode, modegod]
+    usage: "/command"
+  vanish:
+    aliases: [v, staffmodevanish]
+    usage: "/command"

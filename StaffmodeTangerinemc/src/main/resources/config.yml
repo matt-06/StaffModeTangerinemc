@@ -1,0 +1,59 @@
+# StaffMode made by the tangerine dev team
+# Version: 1.0 // Created for TangerineMC
+#permissions:
+#tangerinemc.staffmode = per lanciare il comando "staffmode"
+#tangerine.staffmode.tools = per usare i tools
+#tangerine.staffmode.skipRandomTP = per essere skippati nella selezione del player
+#tangerine.staffmode.helpMessage = per ricevere il messaggio di help
+#tangerine.staffmode.skipVanish = per vedersi tra staffer
+#
+#%Player% = nome del player
+#
+#I NOMI DEGLI INVENTARI DEVONO ESSERE DIVERSI ALTRIMENTI NON FUNZIONERà
+
+
+ConsoleError: "Non sei un giocatore!"
+InsufficentPermissionMessage: "§cNon hai il permesso adeguato per eseguire questo comando."
+StaffModeOnMessage: "§6§lSTAFFMODE §8> §aStaffmode attivata."
+StaffModeOffMessage: "§6§lSTAFFMODE §8> §cStaffmode disabilitata."
+GodModeOnMessage: "§6§lSTAFFMODE §8> §aGodmode attivata."
+GodModeOffMessage: "§6§lSTAFFMODE §8> §cGodmode disattivata"
+NoLongerVisibleMessage: "§6§lSTAFFMODE §8> §cNon sarai più visto dai players"
+VisibleMessage: "§6§lSTAFFMODE §8> §aSarai visto dai players"
+PlayerFreezedMessage: "§6§lSTAFFMODE §8> §aIl player %Player% è stato freezato"
+PlayerUnfreezedMessage: "§6§lSTAFFMODE §8> §cIl player %Player% è stato unfreezato"
+YouAreFreezedMessage: "&cSei stato freezato"
+
+StaffModeInventory:
+  VanishTool:
+    material: "WOOL"
+    name: "Vanish"
+    inventory_index: 0
+  RandomTPTool:
+    material: "LADDER"
+    name: "RandomTP"
+    inventory_index: 1
+  GodModeTool:
+    material: "BED"
+    name: "Godmode"
+    inventory_index: 2
+  TPTool:
+    material: "CRAFTING_TABLE"
+    name: "TP"
+    inventory_index: 3
+    inventory_name: "List of players to tp"
+  FreezeTool:
+    material: "ICE"
+    name: "Freeze"
+    inventory_index: 4
+    inventory_name: "List of players to freeze"
+  InvSeeTool:
+    material: "BOOK"
+    name: "InvSee"
+    inventory_index: 5
+    inventory_name: "Get a player's inventory"
+    player_inventory_name: "%Player%'s inventory" #nome dato alla gui che si apre controllando l'inventario di un player. es: "rumenoh_'s inventory"
+  HelpTool:
+    material: "BARRIER"
+    name: "Help!"
+    inventory_index: 6
