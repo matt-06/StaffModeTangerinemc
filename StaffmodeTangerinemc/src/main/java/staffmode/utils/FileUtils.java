@@ -10,10 +10,9 @@ import java.io.File;
 import java.io.IOException;
 
 public class FileUtils {
-
     private static FileConfiguration configuration;
 
-    public static void createFile(Player player) throws IOException {
+    public void createFile(Player player) throws IOException {
         File file = new File(Bukkit.getServer().getPluginManager().getPlugin("Staffmode").getDataFolder(), player.getDisplayName() + ".yml");
 
         if(!file.exists()){
@@ -29,4 +28,5 @@ public class FileUtils {
     public static FileConfiguration getConfig(){
         return configuration;
     }
+
 }

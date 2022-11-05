@@ -24,8 +24,10 @@ public class StaffModeManager {
     public void setStaffMode(Player staffer){
         stafferStateEnabled.add(staffer);
 
+        FileUtils fileUtils = new FileUtils();
+
         try{
-            FileUtils.createFile(staffer); 
+            fileUtils.createFile(staffer);
         }catch(IOException exception){
             exception.printStackTrace();
         }

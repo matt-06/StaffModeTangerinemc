@@ -6,6 +6,7 @@ import staffmode.commands.StaffModeCommand;
 import staffmode.commands.GodCommand;
 import staffmode.commands.VanishCommand;
 import staffmode.events.*;
+import staffmode.events.*;
 
 public final class Core extends JavaPlugin {
 
