@@ -14,11 +14,11 @@ public class VanishTool {
     }
 
     public void vanishTool(Player player){
-        if(ListUtils.hiddenPlayers.contains(player)){
+        if(ListUtils.getHiddenPlayers().contains(player)){
             String noLongerVisibleMessage = plugin.getConfig().getString("NoLongerVisibleMessage");
             noLongerVisibleMessage = ChatColor.translateAlternateColorCodes('&', noLongerVisibleMessage);
             player.sendMessage(noLongerVisibleMessage);
-            ListUtils.hiddenPlayers.remove(player);
+            ListUtils.getHiddenPlayers().remove(player);
 
 
             for(Player users : Bukkit.getOnlinePlayers()){
@@ -27,7 +27,7 @@ public class VanishTool {
 
 
         }else{
-            ListUtils.hiddenPlayers.add(player);
+            ListUtils.getHiddenPlayers().add(player);
             String VisibleMessage = plugin.getConfig().getString("VisibleMessage");
             VisibleMessage = ChatColor.translateAlternateColorCodes('&', VisibleMessage);
             player.sendMessage(VisibleMessage);

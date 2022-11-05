@@ -23,13 +23,13 @@ public class GodCommand implements CommandExecutor {
         }
         Player player = (Player)sender;
         if(player.hasPermission("tangerine.staffmode.tools")){
-            if(!ListUtils.gods.contains(player)){
-                ListUtils.gods.add(player);
+            if(!ListUtils.getGods().contains(player)){
+                ListUtils.getGods().add(player);
                 String GodModeOn = plugin.getConfig().getString("GodModeOnMessage");
                 GodModeOn = ChatColor.translateAlternateColorCodes('&', GodModeOn);
                 player.sendMessage(GodModeOn);
             }else{
-                ListUtils.gods.remove(player);
+                ListUtils.getGods().remove(player);
                 String GodModeOff = plugin.getConfig().getString("GodModeOffMessage");
                 GodModeOff = ChatColor.translateAlternateColorCodes('&', GodModeOff);
                 player.sendMessage(GodModeOff);

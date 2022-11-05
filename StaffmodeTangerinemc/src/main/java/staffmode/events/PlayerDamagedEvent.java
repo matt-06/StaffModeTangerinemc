@@ -20,7 +20,7 @@ public class PlayerDamagedEvent implements Listener {
         if(event.getEntity() instanceof Player){
             Player player = (Player) event.getEntity();
 
-            if(ListUtils.gods.contains(player)) {
+            if(ListUtils.getGods().contains(player)) {
                 event.setCancelled(true);
             }
         }

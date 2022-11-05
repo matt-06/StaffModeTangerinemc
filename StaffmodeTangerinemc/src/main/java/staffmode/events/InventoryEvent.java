@@ -44,11 +44,11 @@ public class InventoryEvent implements Listener {
                 PlayerFreezedMessage = ChatColor.translateAlternateColorCodes('&', PlayerFreezedMessage);
                 PlayerUnfreezedMessage = ChatColor.translateAlternateColorCodes('&', PlayerUnfreezedMessage);
 
-                if(ListUtils.freezedPlayer.contains(playerToFreeze)){
-                    ListUtils.freezedPlayer.remove(playerToFreeze);
+                if(ListUtils.getFreezedPlayer().contains(playerToFreeze)){
+                    ListUtils.getFreezedPlayer().remove(playerToFreeze);
                     staffer.sendMessage(PlayerUnfreezedMessage);
                 }else{
-                    ListUtils.freezedPlayer.add(playerToFreeze);
+                    ListUtils.getFreezedPlayer().add(playerToFreeze);
                     staffer.sendMessage(PlayerFreezedMessage);
                 }event.setCancelled(true);
             }else if(event.getView().getTitle().equals(plugin.getConfig().getString("StaffModeInventory.InvSeeTool.inventory_name"))){

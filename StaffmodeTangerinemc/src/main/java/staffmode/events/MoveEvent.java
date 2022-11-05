@@ -20,7 +20,7 @@ public class MoveEvent implements Listener {
     public void onMoveEvent(PlayerMoveEvent event){
         Player player = event.getPlayer();
 
-        if(ListUtils.freezedPlayer.contains(player)){
+        if(ListUtils.getFreezedPlayer().contains(player)){
             String youAreFreezedMessage = plugin.getConfig().getString("YouAreFreezedMessage");
 
             youAreFreezedMessage = ChatColor.translateAlternateColorCodes('&', youAreFreezedMessage);

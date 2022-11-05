@@ -15,7 +15,7 @@ public class GodModeTool {
     }
 
     public void godMode(Player player){
-        if(!ListUtils.gods.contains(player)){
+        if(!ListUtils.getGods().contains(player)){
             String godModeOnMessage = plugin.getConfig().getString("GodModeOnMessage");
             godModeOnMessage = ChatColor.translateAlternateColorCodes('&', godModeOnMessage);
             if(!StaffModeManager.stafferStateEnabled.contains(player)) return;
@@ -23,8 +23,8 @@ public class GodModeTool {
             player.setFoodLevel(20);
             player.setHealth(20.0);
             player.sendMessage(godModeOnMessage);
-            ListUtils.gods.add(player);
-        }else if(!ListUtils.gods.contains(player)){
+            ListUtils.getGods().add(player);
+        }else if(!ListUtils.getGods().contains(player)){
             String godModeOnMessage = plugin.getConfig().getString("GodModeOnMessage");
             godModeOnMessage = ChatColor.translateAlternateColorCodes('&', godModeOnMessage);
             if(!StaffModeManager.stafferStateEnabled.contains(player)) return;
@@ -32,12 +32,12 @@ public class GodModeTool {
             player.setFoodLevel(20);
             player.setHealth(20.0);
             player.sendMessage(godModeOnMessage);
-            ListUtils.gods.add(player);
-        }else if(ListUtils.gods.contains(player)){
+            ListUtils.getGods().add(player);
+        }else if(ListUtils.getGods().contains(player)){
             String godModeOffMessage = plugin.getConfig().getString("GodModeOffMessage");
             godModeOffMessage = ChatColor.translateAlternateColorCodes('&', godModeOffMessage);
             player.sendMessage(godModeOffMessage);
-            ListUtils.gods.remove(player);
+            ListUtils.getGods().remove(player);
         }
 
     }
